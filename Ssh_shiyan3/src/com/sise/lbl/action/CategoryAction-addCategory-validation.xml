@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="categoryName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>类型名不能为空</message>
+		</field-validator>
+	</field>
+	<!-- <field name="categoryName">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[categoryName!="-1"]]></param>
+			<message>类型不能为空</message>
+		</field-validator>
+	</field> -->
+</validators>

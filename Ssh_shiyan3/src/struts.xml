@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="s2sh" extends="struts-default" namespace="/lbl">
+		<action name="login" class="loginAction" method="login">
+			<result name="input">/login.jsp</result>
+			<result name="success">/admin.jsp</result>
+		</action>
+		<action name="typePut" class="loginAction" method="typePut">
+			<result name="success">/typePut.jsp</result>
+		</action>
+		<action name="quit" class="loginAction" method="quit">
+			<result name="input">/login.jsp</result>
+		</action>
+		<action name="*Category" class="categoryAction" method="{1}">
+			<result name="input">/typePut.jsp</result>
+			<result name="show">/typeView.jsp</result>
+			<result name="update">/typeUpdate.jsp</result>
+			<result name="success" type="redirect">showCategory.action</result>
+			<allowed-methods>add,show,update,updated,delete</allowed-methods>
+		</action>
+	</package>
+	<package name="s2sh2" extends="s2sh" namespace="/lbl">
+		<action name="*" class="newsAction" method="{1}">
+			<result name="show">/newsPut.jsp</result>
+			<result name="showNews">/newsView.jsp</result>
+			<result name="aShow">/aNewsShow.jsp</result>
+			<result name="update">/newsUpdate.jsp</result>
+			<result name="success" type="redirect">showNews.action</result>
+			<result name="showNewsByCate">/newsView.jsp</result>
+			<result name="input" type="redirect">showNewsCateName.action</result>
+			<result name="yk_showNews">/yk_newsShowByCate.jsp</result>
+			<result name="yk_showNews2">/ayk_newsShowByTitle.jsp</result>
+			<result name="yk_showNews3">/yk_newsShowByTime.jsp</result>
+			<allowed-methods>
+			showNewsCateName,addNews,showNews,aNewsShow,updateNews,updatedNews,deleteNews,showNewsByCate,
+			yk_showNews,yk_showNewsByCate,yk_showNews2,yk_showNewsByTitle,yk_showNews3,yk_showNewsByTime
+			</allowed-methods>
+		</action>
+	</package>
+</struts>

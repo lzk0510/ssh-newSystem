@@ -1,0 +1,82 @@
+html{
+    width: 100%;
+}
+body{
+    background:#dfdfdf;
+    margin:0px auto;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+.user{
+    display:inline-block;
+    height:50px;
+    margin-left:70px;
+    position:absolute;
+    right:100px;
+}
+
+.username{
+    display:inline-block;
+    height:50px;
+    vertical-align:top;
+    line-height:50px;
+}
+.container{
+	
+    height:692px;
+    text-align: center;
+    background: url("../images/lbg.jpg") no-repeat 50% 10%/100%;
+}
+.login{
+    width: 300px;
+    float: right;
+    margin-top: 80px;
+    margin-right: 200px;
+    padding: 20px;
+    background-color:rgba(255,255,255,0.5);
+    border-radius: 15px;
+    text-align: left;
+}
+
+.item1 input{
+    border-radius: 3px;
+    border: 1px solid #c9c9c9;
+    height: 40px;
+    width: 300px;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 10px;
+    background-color:rgba(255,255,255,0.5);
+}
+.item1{
+    margin-top: 20px;
+}
+
+.login_title{
+    font-family: Microsoft YaHei;
+    color: #333;
+    font-size: 30px;
+}
+
+#submit:hover{
+    background-color: #c9c9c4;
+    cursor: pointer;
+}
+
+#input_check{
+    margin-right: 20px;
+    width: 230px;
+}
+
+.logout{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    padding-left: 40px;
+}
+.logout input{
+    width: 50px;
+    height: 30px;
+
+}

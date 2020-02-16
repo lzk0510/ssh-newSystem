@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sise.lbl.po">
+	<class name="Category" table="category5">
+		<id name="id" type="integer">
+			<generator class="native"/>
+		</id>
+		<property name="categoryName" type="string" length="20" not-null="true"/>
+		<set name="news" inverse="true" cascade="persist,delete" fetch="join">
+			<key column="category_id"/>
+			<one-to-many class="News"/>
+		</set>
+	</class>
+</hibernate-mapping>
